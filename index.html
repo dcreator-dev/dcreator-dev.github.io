@@ -51,8 +51,8 @@ header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(3,7,18,.6)
 header.scrolled{background:rgba(3,7,18,.9);box-shadow:0 6px 30px rgba(0,0,0,.4)}
 .nav{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 24px}
 .logo{display:flex;align-items:center;gap:12px;font-family:var(--fd);font-weight:800;font-size:18px;color:var(--text)}
-.logo-icon{width:42px;height:42px;border-radius:12px;padding:5px;background:#fff;display:grid;place-items:center;
-  box-shadow:0 0 0 1px rgba(56,189,248,.4),0 6px 22px rgba(56,189,248,.35);transition:.3s}
+.logo-icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;
+  box-shadow:0 0 0 1px rgba(56,189,248,.4),0 6px 22px rgba(56,189,248,.35);transition:.3s; overflow:hidden;}
 .logo:hover .logo-icon{transform:rotate(-8deg) scale(1.08)}
 .logo-icon img{width:100%;height:100%;object-fit:contain}
 .nav-links{display:flex;gap:26px;align-items:center}
@@ -71,7 +71,7 @@ h2{font-family:var(--fd);font-weight:900;font-size:clamp(30px,4.6vw,46px);margin
 .hero-logo-wrap{margin-bottom:36px;position:relative}
 .hero-logo-wrap::before{content:"";position:absolute;inset:-26px;border-radius:50%;background:radial-gradient(circle,rgba(56,189,248,.35),transparent 70%);animation:pulse 3.4s ease-in-out infinite}
 @keyframes pulse{0%,100%{transform:scale(1);opacity:.5}50%{transform:scale(1.12);opacity:.85}}
-.hero-logo-wrap img{width:150px;height:auto;display:block;background:#fff;padding:18px;border-radius:22px;position:relative;z-index:1;
+.hero-logo-wrap img{width:150px;height:auto;display:block;position:relative;z-index:1;
   box-shadow:0 20px 60px rgba(56,189,248,.3),0 0 0 1px rgba(56,189,248,.5);animation:float 6s ease-in-out infinite}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 .kicker{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--c1);font-weight:600;margin-bottom:18px;font-family:var(--fm)}
@@ -152,13 +152,13 @@ h1 span{background:linear-gradient(135deg,var(--c1),var(--c2) 50%,var(--c3));-we
 .linksrow{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 
 footer{border-top:1px solid var(--border);padding:36px 24px;text-align:center;color:var(--muted);font-size:13px;display:flex;align-items:center;justify-content:center;gap:12px}
-footer img{height:22px;width:auto;background:#fff;padding:3px;border-radius:6px}
+footer img{height:22px;width:auto;border-radius:6px}
 
 .reveal{opacity:0;transform:translateY(40px);transition:.8s cubic-bezier(.4,0,.2,1)}
 .reveal.active{opacity:1;transform:none}
 
 @media(max-width:860px){.bento{grid-template-columns:repeat(2,1fr)}.tile.big{grid-column:span 2;grid-row:auto}.tile.wide{grid-column:span 2}}
-@media(max-width:600px){.nav-links{display:none}.hero{padding-top:120px}.hero-logo-wrap img{width:120px;padding:14px}.cta{flex-direction:column;width:100%}.btn{width:100%}.bento{grid-template-columns:1fr}.tile.big,.tile.wide{grid-column:auto}section{padding:64px 0}}
+@media(max-width:600px){.nav-links{display:none}.hero{padding-top:120px}.hero-logo-wrap img{width:120px}.cta{flex-direction:column;width:100%}.btn{width:100%}.bento{grid-template-columns:1fr}.tile.big,.tile.wide{grid-column:auto}section{padding:64px 0}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}.reveal{opacity:1;transform:none}.hero-logo-wrap img{animation:none}}
 </style>
 </head>
