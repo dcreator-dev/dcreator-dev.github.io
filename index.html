@@ -30,6 +30,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:var(--fb);overflow-x:hidden;-webkit-font-smoothing:antialiased;line-height:1.6}
+body.menu-open{overflow:hidden}
 body::before{content:"";position:fixed;inset:0;z-index:-2;background:
   radial-gradient(circle at 18% 28%,rgba(56,189,248,.16) 0%,transparent 45%),
   radial-gradient(circle at 82% 68%,rgba(129,140,248,.16) 0%,transparent 45%),
@@ -51,8 +52,7 @@ header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(3,7,18,.6)
 header.scrolled{background:rgba(3,7,18,.9);box-shadow:0 6px 30px rgba(0,0,0,.4)}
 .nav{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 24px}
 .logo{display:flex;align-items:center;gap:12px;font-family:var(--fd);font-weight:800;font-size:18px;color:var(--text)}
-.logo-icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;
-  box-shadow:0 0 0 1px rgba(56,189,248,.4),0 6px 22px rgba(56,189,248,.35);transition:.3s; overflow:hidden;}
+.logo-icon{width:42px;height:42px;display:grid;place-items:center;transition:.3s}
 .logo:hover .logo-icon{transform:rotate(-8deg) scale(1.08)}
 .logo-icon img{width:100%;height:100%;object-fit:contain}
 .nav-links{display:flex;gap:26px;align-items:center}
@@ -62,17 +62,36 @@ header.scrolled{background:rgba(3,7,18,.9);box-shadow:0 6px 30px rgba(0,0,0,.4)}
 .lang-btn{background:var(--surface);border:1px solid var(--border);color:var(--text);font-weight:600;font-size:12px;border-radius:8px;padding:8px 14px;cursor:pointer;transition:.2s}
 .lang-btn:hover{border-color:var(--c1);transform:translateY(-2px)}
 
+/* Burger button */
+.burger{display:none;width:44px;height:44px;background:var(--surface);border:1px solid var(--border);border-radius:10px;cursor:pointer;position:relative;z-index:60;transition:.2s}
+.burger:hover{border-color:var(--c1);background:var(--surface2)}
+.burger span,.burger span::before,.burger span::after{content:"";display:block;width:22px;height:2px;background:var(--text);border-radius:2px;position:absolute;left:11px;transition:.3s}
+.burger span{top:21px}
+.burger span::before{top:-7px}
+.burger span::after{top:7px}
+.burger.active span{background:transparent}
+.burger.active span::before{top:0;transform:rotate(45deg);background:var(--c1)}
+.burger.active span::after{top:0;transform:rotate(-45deg);background:var(--c1)}
+
+/* Mobile menu overlay */
+.mobile-menu{position:fixed;top:0;left:0;right:0;bottom:0;z-index:55;background:rgba(3,7,18,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;
+  opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s ease}
+.mobile-menu.open{opacity:1;visibility:visible}
+.mobile-menu a{color:var(--text);font-family:var(--fd);font-weight:700;font-size:22px;letter-spacing:.5px;position:relative;padding:8px 16px;transition:.2s}
+.mobile-menu a::after{content:"";position:absolute;bottom:0;left:50%;width:0;height:2px;background:linear-gradient(90deg,var(--c1),var(--c2));transition:.3s;transform:translateX(-50%)}
+.mobile-menu a:hover{color:var(--c1)}
+.mobile-menu a:hover::after{width:60%}
+.mobile-menu .lang-btn{font-size:14px;padding:10px 20px;margin-top:8px}
+
 main{max-width:1200px;margin:0 auto;padding:0 24px}
 section{padding:96px 0}
 h2{font-family:var(--fd);font-weight:900;font-size:clamp(30px,4.6vw,46px);margin-bottom:10px;letter-spacing:-.5px}
 .sub{color:var(--muted);font-size:16px;margin-bottom:44px;max-width:620px}
 
 .hero{padding-top:150px;padding-bottom:64px;display:flex;flex-direction:column;align-items:center;text-align:center}
-.hero-logo-wrap{margin-bottom:36px;position:relative}
-.hero-logo-wrap::before{content:"";position:absolute;inset:-26px;border-radius:50%;background:radial-gradient(circle,rgba(56,189,248,.35),transparent 70%);animation:pulse 3.4s ease-in-out infinite}
-@keyframes pulse{0%,100%{transform:scale(1);opacity:.5}50%{transform:scale(1.12);opacity:.85}}
-.hero-logo-wrap img{width:150px;height:auto;display:block;position:relative;z-index:1;
-  box-shadow:0 20px 60px rgba(56,189,248,.3),0 0 0 1px rgba(56,189,248,.5);animation:float 6s ease-in-out infinite}
+.hero-logo-wrap{margin-bottom:36px}
+.hero-logo-wrap img{width:150px;height:auto;display:block;animation:float 6s ease-in-out infinite}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 .kicker{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--c1);font-weight:600;margin-bottom:18px;font-family:var(--fm)}
 h1{font-family:var(--fd);font-weight:900;font-size:clamp(38px,6.6vw,70px);line-height:1.08;letter-spacing:-1px;margin-bottom:24px;max-width:900px}
@@ -112,23 +131,19 @@ h1 span{background:linear-gradient(135deg,var(--c1),var(--c2) 50%,var(--c3));-we
 .tile.wide{grid-column:span 2}
 .tile .tag{display:inline-block;font-family:var(--fm);font-size:11px;color:var(--c1);border:1px solid var(--border-hi);border-radius:99px;padding:3px 10px;margin-bottom:14px}
 
-/* BEFORE / AFTER SLIDER */
-.ba-section{margin-top: 20px;}
+.ba-section{margin-top:20px}
 .ba-slider{position:relative;width:100%;max-width:800px;margin:0 auto;border-radius:var(--r);overflow:hidden;border:1px solid var(--border);box-shadow:0 20px 60px rgba(0,0,0,.5);aspect-ratio:16/9;cursor:col-resize;user-select:none;touch-action:none}
 .ba-image{position:absolute;inset:0;overflow:hidden}
 .ba-before{background:#1e293b;z-index:1}
 .ba-after{width:50%;z-index:2;border-right:2px solid var(--c1);background:#0f172a}
-
 .mock-old{padding:24px;display:grid;gap:16px;opacity:.7}
 .mock-old .bar{height:12px;background:#475569;border-radius:4px;width:60%}
 .mock-old .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
 .mock-old .card{background:#334155;height:80px;border-radius:8px}
-
 .mock-new{padding:24px;display:grid;gap:16px;height:100%}
 .mock-new .bar-glow{height:12px;background:linear-gradient(90deg,var(--c1),var(--c2));border-radius:4px;width:60%;box-shadow:0 0 15px rgba(56,189,248,.4)}
 .mock-new .grid-new{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
 .mock-new .card-glow{background:rgba(56,189,248,.1);border:1px solid rgba(56,189,248,.3);height:80px;border-radius:12px;backdrop-filter:blur(4px)}
-
 .ba-handle{position:absolute;top:0;bottom:0;width:40px;left:50%;transform:translateX(-50%);z-index:3;display:flex;align-items:center;justify-content:center;pointer-events:none}
 .ba-line{position:absolute;top:0;bottom:0;width:2px;background:var(--c1);box-shadow:0 0 10px var(--c1)}
 .ba-circle{width:36px;height:36px;border-radius:50%;background:var(--bg);border:2px solid var(--c1);display:grid;place-items:center;box-shadow:0 4px 12px rgba(0,0,0,.5);pointer-events:auto;cursor:col-resize}
@@ -152,13 +167,24 @@ h1 span{background:linear-gradient(135deg,var(--c1),var(--c2) 50%,var(--c3));-we
 .linksrow{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 
 footer{border-top:1px solid var(--border);padding:36px 24px;text-align:center;color:var(--muted);font-size:13px;display:flex;align-items:center;justify-content:center;gap:12px}
-footer img{height:22px;width:auto;border-radius:6px}
+footer img{height:22px;width:auto}
 
 .reveal{opacity:0;transform:translateY(40px);transition:.8s cubic-bezier(.4,0,.2,1)}
 .reveal.active{opacity:1;transform:none}
 
 @media(max-width:860px){.bento{grid-template-columns:repeat(2,1fr)}.tile.big{grid-column:span 2;grid-row:auto}.tile.wide{grid-column:span 2}}
-@media(max-width:600px){.nav-links{display:none}.hero{padding-top:120px}.hero-logo-wrap img{width:120px}.cta{flex-direction:column;width:100%}.btn{width:100%}.bento{grid-template-columns:1fr}.tile.big,.tile.wide{grid-column:auto}section{padding:64px 0}}
+@media(max-width:600px){
+  .burger{display:block}
+  .nav-links{display:none}
+  .hero{padding-top:120px}
+  .hero-logo-wrap img{width:120px}
+  .cta{flex-direction:column;width:100%}
+  .btn{width:100%}
+  .bento{grid-template-columns:1fr}
+  .tile.big,.tile.wide{grid-column:auto}
+  section{padding:64px 0}
+  .mobile-menu a{font-size:20px}
+}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}.reveal{opacity:1;transform:none}.hero-logo-wrap img{animation:none}}
 </style>
 </head>
@@ -178,8 +204,17 @@ footer img{height:22px;width:auto;border-radius:6px}
       <a href="#contact" data-i18n="nav.contact">Контакты</a>
       <button class="lang-btn" id="langToggle">EN</button>
     </div>
+    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false"><span></span></button>
   </nav>
 </header>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a href="#about" data-i18n="nav.about" data-mobile-link>Обо мне</a>
+  <a href="#cases" data-i18n="nav.cases" data-mobile-link>Кейсы</a>
+  <a href="#services" data-i18n="nav.services" data-mobile-link>Услуги</a>
+  <a href="#contact" data-i18n="nav.contact" data-mobile-link>Контакты</a>
+  <button class="lang-btn" id="langToggleMobile">EN</button>
+</div>
 
 <main id="main">
   <section class="hero">
@@ -219,7 +254,7 @@ footer img{height:22px;width:auto;border-radius:6px}
 
   <section id="cases" class="reveal ba-section">
     <h2 data-i18n="cases.h">Кейсы: Было → Стало</h2>
-    <div class="sub" data-i18n="cases.sub">Потяни ползунок, чтобы увидеть разницу. (Замени абстрактные блоки на свои скриншоты в коде)</div>
+    <div class="sub" data-i18n="cases.sub">Потяни ползунок, чтобы увидеть разницу.</div>
     
     <div class="ba-slider" id="baSlider">
       <div class="ba-image ba-before">
@@ -258,8 +293,8 @@ footer img{height:22px;width:auto;border-radius:6px}
 
   <section id="contact" class="reveal">
     <div class="contactbox">
-      <h2 data-scramble>Let's build something</h2>
-      <p data-i18n="contact.p">Открыт к удалённой работе в штате и на контракте (US/EU), фриланс-проектам и сотрудничеству. Отвечаю в течение дня. Напишите — разберу вашу задачу бесплатно.</p>
+      <h2 data-scramble>Давайте построим что-нибудь</h2>
+      <p data-i18n="contact.p">Открыт к удалённой работе в штате и на контракте (US/EU/RU), фриланс-проектам и сотрудничеству. Отвечаю в течение дня. Напишите — разберу вашу задачу бесплатно.</p>
       <div class="linksrow">
         <a href="mailto:vladislav.dcreator@gmail.com" class="btn p magnetic"><span data-i18n="contact.email">Написать на почту</span></a>
         <a href="https://t.me/D_Creators" target="_blank" rel="noopener" class="btn s">Telegram</a>
@@ -318,6 +353,29 @@ if(fine&&!reduce){document.querySelectorAll('.magnetic').forEach(b=>{
     b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.25}px,${(e.clientY-r.top-r.height/2)*.35}px)`});
   b.addEventListener('mouseleave',()=>{b.style.transform=''});
 });}
+
+/* Mobile menu */
+const burger=document.getElementById('burger');
+const mobileMenu=document.getElementById('mobileMenu');
+const mobileLinks=document.querySelectorAll('[data-mobile-link]');
+
+function toggleMenu(){
+  const isOpen=mobileMenu.classList.toggle('open');
+  burger.classList.toggle('active',isOpen);
+  burger.setAttribute('aria-expanded',isOpen);
+  mobileMenu.setAttribute('aria-hidden',!isOpen);
+  document.body.classList.toggle('menu-open',isOpen);
+}
+function closeMenu(){
+  mobileMenu.classList.remove('open');
+  burger.classList.remove('active');
+  burger.setAttribute('aria-expanded','false');
+  mobileMenu.setAttribute('aria-hidden','true');
+  document.body.classList.remove('menu-open');
+}
+burger.addEventListener('click',toggleMenu);
+mobileLinks.forEach(link=>link.addEventListener('click',closeMenu));
+addEventListener('keydown',e=>{if(e.key==='Escape'&&mobileMenu.classList.contains('open'))closeMenu()});
 
 /* BEFORE / AFTER SLIDER LOGIC */
 const slider=document.getElementById('baSlider');
@@ -400,11 +458,14 @@ const I18N={ru:{
  "s4t":"AI integrations","s4d":"Chat assistants and routine automation wired into real products.",
  "contact.p":"Open to remote full-time & contract roles (US/EU), freelance projects and collaborations. I reply within a day. Write me — I'll review your task for free.","contact.email":"Email me","footer":"Built by DCreator · no templates · HTML/CSS/JS"
 }};
-let lang="ru";const lt=document.getElementById('langToggle');
-lt.onclick=()=>{lang=lang==='ru'?'en':'ru';lt.textContent=lang==='ru'?'EN':'RU';document.documentElement.lang=lang;
+let lang="ru";
+function applyLang(){
   document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(I18N[lang][k]){k==='hero.title'?el.innerHTML=I18N[lang][k]:el.textContent=I18N[lang][k]}});
   document.querySelectorAll('[data-scramble]').forEach(el=>{if(el.dataset.final)el.dataset.final=null});
-};
+  document.querySelectorAll('.lang-btn').forEach(b=>{b.textContent=lang==='ru'?'EN':'RU'});
+}
+document.getElementById('langToggle').onclick=()=>{lang=lang==='ru'?'en':'ru';applyLang()};
+document.getElementById('langToggleMobile').onclick=()=>{lang=lang==='ru'?'en':'ru';applyLang()};
 </script>
 </body>
 </html>
