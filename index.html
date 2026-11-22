@@ -3,294 +3,408 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Владислав · D Creator — сайты под ключ, SEO, ИИ-интеграции</title>
-<meta name="description" content="Веб-разработчик с 6+ годами опыта: разработка, редизайн, SEO, реклама и ИИ-интеграции. Сайты, которые приносят заявки. Открыт к удалённой работе и фрилансу.">
+<title>Владислав · DCreator — сайты под ключ, SEO, ИИ-интеграции</title>
+<meta name="description" content="Веб-разработчик 6+ лет: разработка, редизайн, SEO, реклама и ИИ-интеграции. Сайты, которые приносят заявки.">
+<meta property="og:title" content="Владислав · DCreator">
+<meta property="og:description" content="Full-cycle web developer: build, redesign, SEO, ads, AI integrations.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Владислав · D Creator — сайты под ключ">
-<meta property="og:description" content="Разработка, редизайн, SEO, реклама и ИИ-интеграции. 6+ лет опыта.">
-<meta property="og:url" content="https://USERNAME.github.io/">
-<!-- экспортируй obложку 1200x630 из Cover Studio и положи как og.png -->
-<meta property="og:image" content="https://USERNAME.github.io/og.png">
-<meta name="theme-color" content="#050B1A">
+<meta property="og:url" content="https://dcreator-dev.github.io/">
+<meta property="og:image" content="https://dcreator-dev.github.io/logo.png">
+<meta name="theme-color" content="#030712">
+<link rel="icon" type="image/png" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Vladislav","alternateName":"D Creator","jobTitle":"Web Developer","description":"Full-cycle web developer: build, redesign, SEO, ads, AI integrations.","knowsAbout":["Web Development","SEO","AI Integrations","UI/UX","Paid Ads"],"sameAs":["https://github.com/USERNAME","https://www.linkedin.com/in/vladislav-dcreator","https://t.me/USERNAME"]}
+{"@context":"https://schema.org","@type":"Person","name":"Vladislav","alternateName":"DCreator","jobTitle":"Web Developer","url":"https://dcreator-dev.github.io/","sameAs":["https://github.com/dcreator-dev","https://www.linkedin.com/in/vladislav-dcreator/"]}
 </script>
 <style>
-:root{--bg:#050B1A;--bg2:#0A1428;--surface:#0B1630;--surface2:#102040;--line:rgba(0,224,255,.16);
---blue:#0B5CFF;--cyan:#00E0FF;--sky:#9FD8FF;--white:#F2F6FC;--silver:#C9D6E8;
---success:#22C55E;--warning:#F59E0B;--danger:#EF4444;--fd:"Montserrat",system-ui,sans-serif;--fb:"Inter",system-ui,sans-serif}
+:root{
+  --bg:#030712; --surface:rgba(15,23,42,.55); --surface2:rgba(30,41,59,.7);
+  --border:rgba(148,163,184,.12); --border-hi:rgba(56,189,248,.35);
+  --text:#f8fafc; --muted:#94a3b8; --dim:#64748b;
+  --c1:#38bdf8; --c2:#818cf8; --c3:#c084fc;
+  --fd:"Montserrat",system-ui,sans-serif; --fb:"Inter",system-ui,sans-serif; --fm:"JetBrains Mono",ui-monospace,monospace;
+  --r:20px;
+}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--white);font-family:var(--fb);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--text);font-family:var(--fb);overflow-x:hidden;-webkit-font-smoothing:antialiased;line-height:1.6}
 body::before{content:"";position:fixed;inset:0;z-index:-2;background:
-radial-gradient(900px 520px at 10% -10%,rgba(11,92,255,.22),transparent 60%),
-radial-gradient(800px 500px at 92% 0%,rgba(0,224,255,.12),transparent 60%),
-linear-gradient(180deg,var(--bg),var(--bg2))}
-#fx{position:fixed;inset:0;z-index:-1;pointer-events:none}
-::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:var(--bg2)}
-::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--blue),var(--cyan));border-radius:8px;border:2px solid var(--bg2)}
-*{scrollbar-width:thin;scrollbar-color:var(--blue) var(--bg2)}
-a{color:var(--cyan)}
-:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:6px}
-header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(3,7,18,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.nav{max-width:1160px;margin:0 auto;display:flex;align-items:center;gap:18px;padding:14px 22px}
-.logo{font-family:var(--fd);font-weight:800;font-size:17px;color:var(--white);text-decoration:none;display:flex;align-items:center;gap:9px}
-.logo i{width:26px;height:22px;background:linear-gradient(135deg,var(--blue),var(--cyan));clip-path:polygon(0 0,100% 0,100% 62%,62% 100%,0 100%);display:inline-block}
-.nav .links{display:flex;gap:16px;margin-left:auto;align-items:center}
-.nav .links a{color:var(--silver);text-decoration:none;font-size:13.5px;font-weight:600;transition:.16s}
-.nav .links a:hover{color:var(--cyan)}
-.lang{background:var(--surface2);border:1px solid var(--line);color:var(--white);font-weight:700;font-size:12px;border-radius:8px;padding:6px 10px;cursor:pointer}
-.lang:hover{border-color:var(--cyan)}
-.burger{display:none;margin-left:auto;background:none;border:1px solid var(--line);color:var(--white);border-radius:8px;padding:6px 10px;cursor:pointer}
-main{max-width:1160px;margin:0 auto;padding:0 22px}
-section{padding:86px 0 10px}
-.hero{padding:150px 0 40px}
-.kicker{font-size:12px;letter-spacing:2.4px;text-transform:uppercase;color:var(--cyan);font-weight:700;margin-bottom:16px}
-h1{font-family:var(--fd);font-weight:800;font-size:clamp(34px,5.4vw,60px);line-height:1.08;letter-spacing:-.5px}
-h1 span{background:linear-gradient(90deg,var(--blue),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p{margin:20px 0 28px;max-width:640px;color:var(--silver);font-size:16.5px;line-height:1.65}
-.cta{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-block;text-decoration:none;font-weight:700;font-size:14px;border-radius:12px;padding:12px 20px;transition:.18s}
-.btn.p{background:linear-gradient(90deg,var(--blue),var(--cyan));color:#03122A}
-.btn.p:hover{box-shadow:0 8px 26px rgba(0,224,255,.35);transform:translateY(-2px)}
-.btn.s{background:var(--surface2);border:1px solid var(--line);color:var(--white)}
-.btn.s:hover{border-color:var(--cyan);transform:translateY(-2px)}
-.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:44px 0 0}
-.fact{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
-.fact b{display:block;font-family:var(--fd);font-size:22px;color:var(--cyan)}
-.fact span{font-size:12.5px;color:var(--silver)}
-h2{font-family:var(--fd);font-weight:800;font-size:clamp(24px,3vw,34px);margin-bottom:8px}
-.sub{color:var(--sky);font-size:14px;margin-bottom:28px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;transition:.2s;position:relative;overflow:hidden}
-.card:hover{transform:translateY(-3px);border-color:rgba(0,224,255,.4);box-shadow:0 16px 40px rgba(0,0,0,.4)}
-.card h3{font-family:var(--fd);font-size:17px;margin-bottom:8px}
-.card p{color:var(--silver);font-size:13.5px;line-height:1.6}
-.card .n{position:absolute;top:14px;right:18px;font-family:var(--fd);font-weight:800;font-size:13px;color:rgba(0,224,255,.5)}
-.thumb{height:120px;border-radius:12px;margin-bottom:16px;display:grid;place-items:center;font-family:var(--fd);font-weight:800;font-size:44px;color:#03122A;background:linear-gradient(135deg,var(--blue),var(--cyan))}
-.thumb.t2{background:linear-gradient(135deg,#123A8F,var(--cyan))}
-.thumb.t3{background:linear-gradient(135deg,var(--cyan),#7C4DFF)}
-.thumb.t4{background:linear-gradient(135deg,#0E2A5C,#22D3EE)}
-.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.6px;color:var(--cyan);border:1px solid var(--line);border-radius:999px;padding:4px 10px;margin-bottom:10px}
-.card a.more{display:inline-block;margin-top:12px;font-size:13px;font-weight:700;text-decoration:none}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;counter-reset:s}
-.stepc{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;position:relative}
-.stepc::before{counter-increment:s;content:"0" counter(s);font-family:var(--fd);font-weight:800;font-size:15px;color:var(--cyan);display:block;margin-bottom:10px}
-.stepc h3{font-size:15.5px;font-family:var(--fd);margin-bottom:6px}
-.stepc p{color:var(--silver);font-size:13px;line-height:1.6}
-.contactbox{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:20px;padding:34px;text-align:center}
-.contactbox p{color:var(--silver);max-width:560px;margin:10px auto 24px;line-height:1.65;font-size:14.5px}
-.linksrow{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-footer{border-top:1px solid var(--line);margin-top:80px;padding:26px 22px;text-align:center;color:var(--sky);font-size:12.5px}
-.reveal{opacity:0;transform:translateY(18px);transition:.6s ease}
-.reveal.in{opacity:1;transform:none}
-@media(max-width:820px){
-.nav .links{display:none;position:absolute;top:58px;left:0;right:0;background:rgba(3,7,18,.97);flex-direction:column;padding:18px;gap:14px;border-bottom:1px solid var(--line)}
-.nav .links.open{display:flex}
-.burger{display:block}
-.hero{padding:120px 0 30px}
-}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{transition:none;opacity:1;transform:none}}
+  radial-gradient(circle at 18% 28%,rgba(56,189,248,.16) 0%,transparent 45%),
+  radial-gradient(circle at 82% 68%,rgba(129,140,248,.16) 0%,transparent 45%),
+  radial-gradient(circle at 55% 95%,rgba(192,132,252,.10) 0%,transparent 55%);
+  animation:mesh 24s ease-in-out infinite}
+@keyframes mesh{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(28px,-24px) scale(1.08)}66%{transform:translate(-22px,18px) scale(.96)}}
+#particles{position:fixed;inset:0;z-index:-1;pointer-events:none}
+a{color:var(--c1);text-decoration:none;transition:.2s}
+:focus-visible{outline:2px solid var(--c1);outline-offset:3px;border-radius:8px}
+.skip{position:absolute;left:-999px;top:0;z-index:100;background:var(--c1);color:#03122a;padding:10px 16px;border-radius:8px;font-weight:700}
+.skip:focus{left:12px;top:12px}
+
+#progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:60;background:linear-gradient(90deg,var(--c1),var(--c2),var(--c3));box-shadow:0 0 12px var(--c1)}
+#cursor{position:fixed;top:0;left:0;width:26px;height:26px;border-radius:50%;z-index:70;pointer-events:none;mix-blend-mode:screen;
+  background:radial-gradient(circle,rgba(56,189,248,.5),transparent 70%);transform:translate(-50%,-50%);transition:width .2s,height .2s,background .2s;display:none}
+@media(pointer:fine){#cursor{display:block}}
+
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(3,7,18,.6);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--border);transition:.3s}
+header.scrolled{background:rgba(3,7,18,.9);box-shadow:0 6px 30px rgba(0,0,0,.4)}
+.nav{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 24px}
+.logo{display:flex;align-items:center;gap:12px;font-family:var(--fd);font-weight:800;font-size:18px;color:var(--text)}
+.logo-icon{width:42px;height:42px;border-radius:12px;padding:5px;background:#fff;display:grid;place-items:center;
+  box-shadow:0 0 0 1px rgba(56,189,248,.4),0 6px 22px rgba(56,189,248,.35);transition:.3s}
+.logo:hover .logo-icon{transform:rotate(-8deg) scale(1.08)}
+.logo-icon img{width:100%;height:100%;object-fit:contain}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{color:var(--muted);font-size:14px;font-weight:500;position:relative}
+.nav-links a::after{content:"";position:absolute;bottom:-5px;left:0;width:0;height:2px;background:linear-gradient(90deg,var(--c1),var(--c2));transition:width .3s}
+.nav-links a:hover{color:var(--text)}.nav-links a:hover::after{width:100%}
+.lang-btn{background:var(--surface);border:1px solid var(--border);color:var(--text);font-weight:600;font-size:12px;border-radius:8px;padding:8px 14px;cursor:pointer;transition:.2s}
+.lang-btn:hover{border-color:var(--c1);transform:translateY(-2px)}
+
+main{max-width:1200px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+h2{font-family:var(--fd);font-weight:900;font-size:clamp(30px,4.6vw,46px);margin-bottom:10px;letter-spacing:-.5px}
+.sub{color:var(--muted);font-size:16px;margin-bottom:44px;max-width:620px}
+
+.hero{padding-top:150px;padding-bottom:64px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.hero-logo-wrap{margin-bottom:36px;position:relative}
+.hero-logo-wrap::before{content:"";position:absolute;inset:-26px;border-radius:50%;background:radial-gradient(circle,rgba(56,189,248,.35),transparent 70%);animation:pulse 3.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:.5}50%{transform:scale(1.12);opacity:.85}}
+.hero-logo-wrap img{width:150px;height:auto;display:block;background:#fff;padding:18px;border-radius:22px;position:relative;z-index:1;
+  box-shadow:0 20px 60px rgba(56,189,248,.3),0 0 0 1px rgba(56,189,248,.5);animation:float 6s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.kicker{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--c1);font-weight:600;margin-bottom:18px;font-family:var(--fm)}
+h1{font-family:var(--fd);font-weight:900;font-size:clamp(38px,6.6vw,70px);line-height:1.08;letter-spacing:-1px;margin-bottom:24px;max-width:900px}
+h1 span{background:linear-gradient(135deg,var(--c1),var(--c2) 50%,var(--c3));-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200% 200%;animation:grad 6s ease infinite}
+@keyframes grad{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.hero p{color:var(--muted);font-size:18px;max-width:680px;margin-bottom:36px}
+.cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-weight:600;font-size:15px;border-radius:12px;padding:15px 30px;transition:.25s;border:none;cursor:pointer;position:relative;overflow:hidden}
+.btn.p{background:linear-gradient(135deg,var(--c1),var(--c2));color:#03122a;box-shadow:0 8px 30px rgba(56,189,248,.4)}
+.btn.p:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(56,189,248,.55)}
+.btn.s{background:var(--surface);border:1px solid var(--border);color:var(--text);backdrop-filter:blur(8px)}
+.btn.s:hover{border-color:var(--c1);transform:translateY(-3px)}
+
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin:64px 0 0;width:100%}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:24px 16px;text-align:center;backdrop-filter:blur(8px)}
+.stat b{font-family:var(--fd);font-weight:900;font-size:34px;display:block;background:linear-gradient(135deg,var(--c1),var(--c3));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{color:var(--muted);font-size:13px}
+
+.marquee{overflow:hidden;border-block:1px solid var(--border);padding:18px 0;margin:24px 0 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.marquee-track{display:flex;gap:40px;width:max-content;animation:scroll 28s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-track span{font-family:var(--fm);font-size:14px;color:var(--muted);white-space:nowrap;letter-spacing:.5px}
+.marquee-track span::before{content:"◆";color:var(--c1);margin-right:40px}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+.bento{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.tile{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:28px;position:relative;overflow:hidden;backdrop-filter:blur(10px);transition:border-color .3s,transform .3s}
+.tile::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s;
+  background:radial-gradient(220px circle at var(--mx,50%) var(--my,50%),rgba(56,189,248,.18),transparent 60%)}
+.tile:hover::before{opacity:1}
+.tile:hover{border-color:var(--border-hi)}
+.tile .n{font-family:var(--fd);font-weight:900;font-size:42px;color:rgba(56,189,248,.12);line-height:1;margin-bottom:14px}
+.tile h3{font-family:var(--fd);font-size:19px;margin-bottom:10px}
+.tile p{color:var(--muted);font-size:14.5px}
+.tile.big{grid-column:span 2;grid-row:span 2;display:flex;flex-direction:column;justify-content:space-between}
+.tile.big .n{font-size:64px}
+.tile.wide{grid-column:span 2}
+.tile .tag{display:inline-block;font-family:var(--fm);font-size:11px;color:var(--c1);border:1px solid var(--border-hi);border-radius:99px;padding:3px 10px;margin-bottom:14px}
+
+/* BEFORE / AFTER SLIDER */
+.ba-section{margin-top: 20px;}
+.ba-slider{position:relative;width:100%;max-width:800px;margin:0 auto;border-radius:var(--r);overflow:hidden;border:1px solid var(--border);box-shadow:0 20px 60px rgba(0,0,0,.5);aspect-ratio:16/9;cursor:col-resize;user-select:none;touch-action:none}
+.ba-image{position:absolute;inset:0;overflow:hidden}
+.ba-before{background:#1e293b;z-index:1}
+.ba-after{width:50%;z-index:2;border-right:2px solid var(--c1);background:#0f172a}
+
+.mock-old{padding:24px;display:grid;gap:16px;opacity:.7}
+.mock-old .bar{height:12px;background:#475569;border-radius:4px;width:60%}
+.mock-old .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+.mock-old .card{background:#334155;height:80px;border-radius:8px}
+
+.mock-new{padding:24px;display:grid;gap:16px;height:100%}
+.mock-new .bar-glow{height:12px;background:linear-gradient(90deg,var(--c1),var(--c2));border-radius:4px;width:60%;box-shadow:0 0 15px rgba(56,189,248,.4)}
+.mock-new .grid-new{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+.mock-new .card-glow{background:rgba(56,189,248,.1);border:1px solid rgba(56,189,248,.3);height:80px;border-radius:12px;backdrop-filter:blur(4px)}
+
+.ba-handle{position:absolute;top:0;bottom:0;width:40px;left:50%;transform:translateX(-50%);z-index:3;display:flex;align-items:center;justify-content:center;pointer-events:none}
+.ba-line{position:absolute;top:0;bottom:0;width:2px;background:var(--c1);box-shadow:0 0 10px var(--c1)}
+.ba-circle{width:36px;height:36px;border-radius:50%;background:var(--bg);border:2px solid var(--c1);display:grid;place-items:center;box-shadow:0 4px 12px rgba(0,0,0,.5);pointer-events:auto;cursor:col-resize}
+.ba-circle svg{width:16px;height:16px;fill:var(--c1)}
+.ba-label{position:absolute;bottom:16px;padding:6px 12px;background:rgba(0,0,0,.7);backdrop-filter:blur(4px);border-radius:8px;font-family:var(--fm);font-size:12px;font-weight:600;color:#fff;z-index:4;pointer-events:none}
+.ba-before .ba-label{right:16px;color:var(--muted)}
+.ba-after .ba-label{left:16px;color:var(--c1)}
+
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;counter-reset:s}
+.stepc{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:26px;transition:.3s;position:relative;overflow:hidden}
+.stepc::before{counter-increment:s;content:"0" counter(s);font-family:var(--fd);font-weight:900;font-size:44px;background:linear-gradient(135deg,var(--c1),var(--c2));-webkit-background-clip:text;background-clip:text;color:transparent;display:block;margin-bottom:12px;line-height:1}
+.stepc:hover{transform:translateY(-4px);border-color:var(--border-hi)}
+.stepc h3{font-family:var(--fd);font-size:17px;margin-bottom:8px}
+.stepc p{color:var(--muted);font-size:13.5px}
+
+.contactbox{background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:56px 28px;text-align:center;position:relative;overflow:hidden;backdrop-filter:blur(10px)}
+.contactbox::before{content:"";position:absolute;inset:-50%;background:conic-gradient(from 0deg,transparent,rgba(56,189,248,.12),transparent 40%);animation:spin 16s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.contactbox>*{position:relative;z-index:1}
+.contactbox p{color:var(--muted);max-width:560px;margin:14px auto 30px;font-size:16px}
+.linksrow{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+footer{border-top:1px solid var(--border);padding:36px 24px;text-align:center;color:var(--muted);font-size:13px;display:flex;align-items:center;justify-content:center;gap:12px}
+footer img{height:22px;width:auto;background:#fff;padding:3px;border-radius:6px}
+
+.reveal{opacity:0;transform:translateY(40px);transition:.8s cubic-bezier(.4,0,.2,1)}
+.reveal.active{opacity:1;transform:none}
+
+@media(max-width:860px){.bento{grid-template-columns:repeat(2,1fr)}.tile.big{grid-column:span 2;grid-row:auto}.tile.wide{grid-column:span 2}}
+@media(max-width:600px){.nav-links{display:none}.hero{padding-top:120px}.hero-logo-wrap img{width:120px;padding:14px}.cta{flex-direction:column;width:100%}.btn{width:100%}.bento{grid-template-columns:1fr}.tile.big,.tile.wide{grid-column:auto}section{padding:64px 0}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}.reveal{opacity:1;transform:none}.hero-logo-wrap img{animation:none}}
 </style>
 </head>
 <body>
-<canvas id="fx"></canvas>
-<header>
+<a href="#main" class="skip">Перейти к содержимому</a>
+<canvas id="particles"></canvas>
+<div id="progress"></div>
+<div id="cursor"></div>
+
+<header id="header">
   <nav class="nav">
-    <a class="logo" href="#top"><i></i>D Creator</a>
-    <button class="burger" id="burger" aria-label="Menu">☰</button>
-    <div class="links" id="links">
-      <a href="#about" data-i18n="nav.about"></a>
-      <a href="#services" data-i18n="nav.services"></a>
-      <a href="#work" data-i18n="nav.work"></a>
-      <a href="#process" data-i18n="nav.process"></a>
-      <a href="#contact" data-i18n="nav.contact"></a>
-      <button class="lang" id="lang">EN</button>
+    <a href="#" class="logo"><span class="logo-icon"><img src="logo.png" alt="DCreator"></span> DCreator</a>
+    <div class="nav-links">
+      <a href="#about" data-i18n="nav.about">Обо мне</a>
+      <a href="#cases" data-i18n="nav.cases">Кейсы</a>
+      <a href="#services" data-i18n="nav.services">Услуги</a>
+      <a href="#contact" data-i18n="nav.contact">Контакты</a>
+      <button class="lang-btn" id="langToggle">EN</button>
     </div>
   </nav>
 </header>
-<main id="top">
+
+<main id="main">
   <section class="hero">
-    <div class="kicker" data-i18n="hero.kicker"></div>
-    <h1 data-i18n="hero.title"></h1>
-    <p data-i18n="hero.sub"></p>
+    <div class="hero-logo-wrap"><img src="logo.png" alt="DCreator logo"></div>
+    <div class="kicker" data-scramble>WEB · SEO · AI · DESIGN</div>
+    <h1 data-i18n="hero.title">Сайты, которые <span>приносят заявки</span>, а не просто существуют</h1>
+    <p data-i18n="hero.sub">Я Владислав, основатель DCreator. 6+ лет закрываю полный цикл в одних руках: разработка, редизайн, дизайн, SEO, реклама и ИИ-интеграции. Один ответственный от брифа до измеримого результата.</p>
     <div class="cta">
-      <a class="btn p" href="#work" data-i18n="hero.cta1"></a>
-      <a class="btn s" href="#contact" data-i18n="hero.cta2"></a>
+      <a href="#contact" class="btn p magnetic"><span data-i18n="hero.cta1">Связаться</span></a>
+      <a href="https://github.com/dcreator-dev" target="_blank" rel="noopener" class="btn s">GitHub ↗</a>
     </div>
-    <div class="facts">
-      <div class="fact reveal"><b>6+</b><span data-i18n="fact1"></span></div>
-      <div class="fact reveal"><b data-i18n="fact2b"></b><span data-i18n="fact2"></span></div>
-      <div class="fact reveal"><b data-i18n="fact3b"></b><span data-i18n="fact3"></span></div>
-      <div class="fact reveal"><b data-i18n="fact4b"></b><span data-i18n="fact4"></span></div>
-    </div>
-  </section>
-
-  <section id="about">
-    <h2 data-i18n="about.h"></h2>
-    <div class="sub" data-i18n="about.sub"></div>
-    <div class="grid">
-      <div class="card reveal"><p data-i18n="about.p1"></p></div>
-      <div class="card reveal"><p data-i18n="about.p2"></p></div>
+    <div class="stats">
+      <div class="stat"><b data-count="6" data-suffix="+">0</b><span data-i18n="stat.years">лет в разработке</span></div>
+      <div class="stat"><b data-count="100" data-suffix="+">0</b><span data-i18n="stat.projects">проектов</span></div>
+      <div class="stat"><b data-count="98" data-suffix="%">0</b><span data-i18n="stat.retention">клиентов возвращаются</span></div>
+      <div class="stat"><b data-count="24" data-suffix="h">0</b><span data-i18n="stat.reply">среднее время ответа</span></div>
     </div>
   </section>
 
-  <section id="services">
-    <h2 data-i18n="services.h"></h2>
-    <div class="sub" data-i18n="services.sub"></div>
-    <div class="grid">
-      <div class="card reveal"><span class="n">01</span><h3 data-i18n="s1t"></h3><p data-i18n="s1d"></p></div>
-      <div class="card reveal"><span class="n">02</span><h3 data-i18n="s2t"></h3><p data-i18n="s2d"></p></div>
-      <div class="card reveal"><span class="n">03</span><h3 data-i18n="s3t"></h3><p data-i18n="s3d"></p></div>
-      <div class="card reveal"><span class="n">04</span><h3 data-i18n="s4t"></h3><p data-i18n="s4d"></p></div>
-      <div class="card reveal"><span class="n">05</span><h3 data-i18n="s5t"></h3><p data-i18n="s5d"></p></div>
-      <div class="card reveal"><span class="n">06</span><h3 data-i18n="s6t"></h3><p data-i18n="s6d"></p></div>
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>HTML</span><span>CSS</span><span>JavaScript</span><span>TypeScript</span><span>React</span><span>Node.js</span><span>Python</span><span>PHP</span><span>WordPress</span><span>SEO</span><span>Google Ads</span><span>Meta Ads</span><span>Figma</span><span>AI / LLM</span><span>Git</span>
+      <span>HTML</span><span>CSS</span><span>JavaScript</span><span>TypeScript</span><span>React</span><span>Node.js</span><span>Python</span><span>PHP</span><span>WordPress</span><span>SEO</span><span>Google Ads</span><span>Meta Ads</span><span>Figma</span><span>AI / LLM</span><span>Git</span>
+    </div>
+  </div>
+
+  <section id="about" class="reveal">
+    <h2 data-i18n="about.h">Обо мне</h2>
+    <div class="sub" data-i18n="about.sub">Инженерный подход к веб-разработке</div>
+    <div class="bento">
+      <div class="tile big tilt"><div><div class="n">01</div><h3 data-i18n="about.c1t">Техническая база</h3><p data-i18n="about.c1d">Высшее образование инженера-программиста. Пишу чистый, адаптивный и быстрый код, а не собираю конструкторы.</p></div><span class="tag">ENGINEERING</span></div>
+      <div class="tile tilt"><div class="n">02</div><h3 data-i18n="about.c2t">Full-cycle</h3><p data-i18n="about.c2d">От прототипа и дизайна до SEO и аналитики — всё под одним контролем.</p></div>
+      <div class="tile tilt"><div class="n">03</div><h3 data-i18n="about.c3t">Open Source</h3><p data-i18n="about.c3d">Создаю и публикую свои инструменты автоматизации.</p></div>
+      <div class="tile wide tilt"><div class="n">04</div><h3 data-i18n="about.c4t">Результат в цифрах</h3><p data-i18n="about.c4d">Меряю успех трафиком, заявками и выручкой, а не «красиво».</p></div>
     </div>
   </section>
 
-  <section id="work">
-    <h2 data-i18n="work.h"></h2>
-    <div class="sub" data-i18n="work.sub"></div>
-    <div class="grid">
-      <div class="card reveal"><div class="thumb">▣</div><span class="tag" data-i18n="wtag"></span><h3>Cover Studio</h3><p data-i18n="w1d"></p><a class="more" href="https://github.com/USERNAME/cover-studio" data-i18n="more"></a></div>
-      <div class="card reveal"><div class="thumb t2">Ц</div><span class="tag" data-i18n="wtag"></span><h3>Blade Type Lab</h3><p data-i18n="w2d"></p><a class="more" href="https://github.com/USERNAME/blade-type-lab" data-i18n="more"></a></div>
-      <div class="card reveal"><div class="thumb t3">D</div><span class="tag" data-i18n="wtag"></span><h3>Logo Lab</h3><p data-i18n="w3d"></p><a class="more" href="https://github.com/USERNAME/logo-lab" data-i18n="more"></a></div>
-      <div class="card reveal"><div class="thumb t4">py</div><span class="tag" data-i18n="wtag2"></span><h3>Brand Kit</h3><p data-i18n="w4d"></p><a class="more" href="https://github.com/USERNAME/brand-kit" data-i18n="more"></a></div>
+  <section id="cases" class="reveal ba-section">
+    <h2 data-i18n="cases.h">Кейсы: Было → Стало</h2>
+    <div class="sub" data-i18n="cases.sub">Потяни ползунок, чтобы увидеть разницу. (Замени абстрактные блоки на свои скриншоты в коде)</div>
+    
+    <div class="ba-slider" id="baSlider">
+      <div class="ba-image ba-before">
+        <div class="mock-old">
+          <div class="bar"></div>
+          <div class="grid"><div class="card"></div><div class="card"></div></div>
+        </div>
+        <span class="ba-label">БЫЛО: Устаревший UI, медленная загрузка</span>
+      </div>
+      <div class="ba-image ba-after" id="baAfter">
+        <div class="mock-new">
+          <div class="bar-glow"></div>
+          <div class="grid-new"><div class="card-glow"></div><div class="card-glow"></div></div>
+        </div>
+        <span class="ba-label">СТАЛО: Современный дизайн, +140% к конверсии</span>
+      </div>
+      <div class="ba-handle" id="baHandle">
+        <div class="ba-line"></div>
+        <div class="ba-circle">
+          <svg viewBox="0 0 24 24"><path d="M8 5l-5 7 5 7M16 5l5 7-5 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="process">
-    <h2 data-i18n="process.h"></h2>
-    <div class="sub" data-i18n="process.sub"></div>
-    <div class="steps">
-      <div class="stepc reveal"><h3 data-i18n="p1t"></h3><p data-i18n="p1d"></p></div>
-      <div class="stepc reveal"><h3 data-i18n="p2t"></h3><p data-i18n="p2d"></p></div>
-      <div class="stepc reveal"><h3 data-i18n="p3t"></h3><p data-i18n="p3d"></p></div>
-      <div class="stepc reveal"><h3 data-i18n="p4t"></h3><p data-i18n="p4d"></p></div>
+  <section id="services" class="reveal">
+    <h2 data-i18n="services.h">Услуги</h2>
+    <div class="sub" data-i18n="services.sub">Полный цикл в одних руках</div>
+    <div class="bento">
+      <div class="tile wide tilt"><div class="n">01</div><h3 data-i18n="s1t">Разработка под ключ</h3><p data-i18n="s1d">Лендинги, корпоративные сайты и e-commerce: адаптивные, быстрые, с настроенной аналитикой.</p></div>
+      <div class="tile tilt"><div class="n">02</div><h3 data-i18n="s2t">Редизайн</h3><p data-i18n="s2d">Устаревший сайт → современный продукт с понятным путём к заявке.</p></div>
+      <div class="tile tilt"><div class="n">03</div><h3 data-i18n="s3t">SEO и реклама</h3><p data-i18n="s3d">Техническое SEO, кампании, отчётность по стоимости лида.</p></div>
+      <div class="tile tilt"><div class="n">04</div><h3 data-i18n="s4t">ИИ-интеграции</h3><p data-i18n="s4d">Чат-ассистенты и автоматизация рутины в реальном продукте.</p></div>
     </div>
   </section>
 
-  <section id="contact">
-    <div class="contactbox reveal">
-      <h2 data-i18n="contact.h"></h2>
-      <p data-i18n="contact.p"></p>
+  <section id="contact" class="reveal">
+    <div class="contactbox">
+      <h2 data-scramble>Let's build something</h2>
+      <p data-i18n="contact.p">Открыт к удалённой работе в штате и на контракте (US/EU), фриланс-проектам и сотрудничеству. Отвечаю в течение дня. Напишите — разберу вашу задачу бесплатно.</p>
       <div class="linksrow">
-        <a class="btn p" href="mailto:EMAIL" data-i18n="contact.email"></a>
-        <a class="btn s" href="https://t.me/USERNAME">Telegram</a>
-        <a class="btn s" href="https://github.com/USERNAME">GitHub</a>
-        <a class="btn s" href="https://www.linkedin.com/in/vladislav-dcreator">LinkedIn</a>
-        <a class="btn s" href="https://kwork.ru/user/USERNAME">Kwork</a>
-        <a class="btn s" href="https://vk.com/USERNAME">VK</a>
+        <a href="mailto:vladislav.dcreator@gmail.com" class="btn p magnetic"><span data-i18n="contact.email">Написать на почту</span></a>
+        <a href="https://t.me/D_Creators" target="_blank" rel="noopener" class="btn s">Telegram</a>
+        <a href="https://www.linkedin.com/in/vladislav-dcreator/" target="_blank" rel="noopener" class="btn s">LinkedIn</a>
+        <a href="https://github.com/dcreator-dev" target="_blank" rel="noopener" class="btn s">GitHub</a>
       </div>
     </div>
   </section>
 </main>
-<footer><span data-i18n="footer"></span></footer>
+
+<footer>
+  <img src="logo.png" alt="D">
+  <span data-i18n="footer">Сделано DCreator · без шаблонов · HTML/CSS/JS</span>
+</footer>
 
 <script>
 "use strict";
-const I18N={
-ru:{
-"nav.about":"Обо мне","nav.services":"Услуги","nav.work":"Работы","nav.process":"Процесс","nav.contact":"Контакты",
-"hero.kicker":"Веб-разработка · SEO · ИИ-интеграции",
-"hero.title":"Сайты, которые <span>приносят заявки</span>, а не просто существуют",
-"hero.sub":"Я Владислав, основатель D Creator. 6+ лет закрываю полный цикл в одних руках: разработка, редизайн, дизайн, SEO, реклама и ИИ-интеграции. Один ответственный от брифа до результата.",
-"hero.cta1":"Смотреть работы","hero.cta2":"Связаться",
-"fact1":"лет в веб-разработке","fact2b":"Full-cycle","fact2":"от брифа до трафика и заявок","fact3b":"Инженер","fact3":"высшее техническое образование","fact4b":"Remote","fact4":"открыт к удалёнке и фрилансу",
-"about.h":"Обо мне","about.sub":"Кто я и как работаю",
-"about.p1":"Меня зовут Владислав, я веб-разработчик и основатель бренда D Creator. По образованию инженер-программист, что даёт техническую базу для задач любой сложности. За 6 лет практики освоил весь цикл создания веб-продукта — от кода и дизайна до продвижения и автоматизации.",
-"about.p2":"Мой подход: глубокое погружение в задачу заказчика, прозрачная коммуникация и результат, который можно измерить заявками и выручкой. Собственные инструменты для бренда и маркетинга пишу кодом и выкладываю в open source.",
-"services.h":"Услуги","services.sub":"Полный цикл в одних руках",
-"s1t":"Разработка под ключ","s1d":"Лендинги, корпоративные сайты и e-commerce: адаптивные, быстрые, с настроенной аналитикой и понятной структурой.",
-"s2t":"Редизайн","s2d":"Превращаю устаревшие сайты в современные продукты: новый интерфейс, ускорение загрузки, понятный путь к заявке.",
-"s3t":"SEO и продвижение","s3d":"Техническое и внутреннее SEO, семантика, оптимизация скорости и индексации — рост органического трафика.",
-"s4t":"Реклама","s4d":"Настройка и ведение кампаний в Яндекс Директ и VK Реклама / Google Ads и Meta Ads, отчётность по заявкам и стоимости лида.",
-"s5t":"ИИ-интеграции","s5d":"Чат-ассистенты, контент-конвейеры и автоматизация рутины, встроенные в реальный продукт, а не «демо ради демо».",
-"s6t":"Дизайн и бренд","s6d":"UI/UX, фирменные цвета и типографика, обложки и аватары для соцсетей — единая стилистика во всех каналах.",
-"work.h":"Избранные работы","work.sub":"Инструменты, которые я построил и использую сам",
-"wtag":"Инструмент · open source","wtag2":"Python · open source",
-"w1d":"Студия обложек ВК и Kwork: живые safe-зоны под мобильный кроп, экспорт PNG/SVG в полном размере, фирменные палитры.",
-"w2d":"Кузница «лезвий» для кириллических заголовков: наклон, срезы и острия на терминалях, градиент и свечение, экспорт SVG/PNG и CSS.",
-"w3d":"Векторный конструктор фирменного знака: палитры, подложки-аватары, градиенты и свечение, экспорт SVG и PNG без растра.",
-"w4d":"Python-генераторы обложек, аватаров и логотипов в едином стиле: один бренд-код — весь комплект макетов одной командой.",
-"more":"GitHub →",
-"process.h":"Как я работаю","process.sub":"Четыре шага от идеи до результата",
-"p1t":"Бриф и цели","p1d":"Разбираем задачу, аудиторию и метрику успеха: заявки, трафик или выручка. Фиксируем объём и сроки.",
-"p2t":"Прототип и дизайн","p2d":"Структура и оффер сначала, картинка потом. Прототип согласуем до разработки, чтобы не переделывать код.",
-"p3t":"Разработка и запуск","p3d":"Чистый адаптивный код, скорость, аналитика, SEO-база. Запуск с чек-листом и передачей доступов.",
-"p4t":"Рост","p4d":"SEO, реклама и ИИ-автоматизация после запуска. Смотрим на цифры и улучшаем то, что работает.",
-"contact.h":"Связаться","contact.p":"Открыт к удалённой работе в штате и на контракте, фриланс-проектам и сотрудничеству. Отвечаю в течение дня. Напишите — разберу вашу задачу бесплатно.",
-"contact.email":"Написать на почту",
-"footer":"Сделано D Creator · без шаблонов · HTML/CSS/JS"
-},
-en:{
-"nav.about":"About","nav.services":"Services","nav.work":"Work","nav.process":"Process","nav.contact":"Contact",
-"hero.kicker":"Web development · SEO · AI integrations",
-"hero.title":"Websites that <span>bring leads</span>, not just exist",
-"hero.sub":"I'm Vladislav, founder of D Creator. For 6+ years I've covered the full cycle in one pair of hands: development, redesign, design, SEO, paid ads and AI integrations. One owner from brief to result.",
-"hero.cta1":"See work","hero.cta2":"Get in touch",
-"fact1":"years in web development","fact2b":"Full-cycle","fact2":"from brief to traffic and leads","fact3b":"Engineer","fact3":"higher technical education","fact4b":"Remote","fact4":"open to remote & freelance",
-"about.h":"About","about.sub":"Who I am and how I work",
-"about.p1":"I'm Vladislav, a web developer and founder of the D Creator brand. By education I'm an engineer-programmer, which gives me the technical base for tasks of any complexity. Over 6 years of practice I've mastered the whole cycle of building a web product — from code and design to growth and automation.",
-"about.p2":"My approach: deep dive into the client's task, transparent communication, and results measurable in leads and revenue. I build my own brand & marketing tooling in code and open-source it.",
-"services.h":"Services","services.sub":"Full cycle in one pair of hands",
-"s1t":"End-to-end development","s1d":"Landing pages, corporate sites and e-commerce: responsive, fast, with analytics configured and a clear structure.",
-"s2t":"Redesign","s2d":"Turning outdated sites into modern products: new UI, faster load times, a clear path to conversion.",
-"s3t":"SEO & growth","s3d":"Technical and on-page SEO, semantics, speed and indexation optimization — organic traffic growth.",
-"s4t":"Paid ads","s4d":"Setup and management of Google Ads / Meta Ads (and Yandex Direct / VK Ads for RU), reporting on leads and cost per lead.",
-"s5t":"AI integrations","s5d":"Chat assistants, content pipelines and routine automation wired into real products — not demos for demos' sake.",
-"s6t":"Design & brand","s6d":"UI/UX, brand colors and typography, covers and avatars for socials — one consistent style across every channel.",
-"work.h":"Selected work","work.sub":"Tools I built and use myself",
-"wtag":"Tool · open source","wtag2":"Python · open source",
-"w1d":"VK & Kwork cover studio: live mobile safe-zones, full-size PNG/SVG export, brand palettes.",
-"w2d":"A forge of 'blades' for Cyrillic headlines: skew, cuts and points on terminals, gradient and glow, SVG/PNG and CSS export.",
-"w3d":"Vector constructor of the brand mark: palettes, avatar containers, gradients and glow, SVG and PNG export without raster.",
-"w4d":"Python generators for covers, avatars and logos in one style: one brand code — the whole asset kit in a single command.",
-"more":"GitHub →",
-"process.h":"How I work","process.sub":"Four steps from idea to result",
-"p1t":"Brief & goals","p1d":"We unpack the task, audience and success metric: leads, traffic or revenue. Scope and timeline fixed.",
-"p2t":"Prototype & design","p2d":"Structure and offer first, visuals second. Prototype approved before development so code isn't rewritten.",
-"p3t":"Build & launch","p3d":"Clean responsive code, speed, analytics, SEO base. Launch with a checklist and handover of access.",
-"p4t":"Growth","p4d":"SEO, ads and AI automation after launch. We watch the numbers and improve what works.",
-"contact.h":"Get in touch","contact.p":"Open to remote full-time & contract roles, freelance projects and collaborations. I reply within a day. Write me — I'll review your task for free.",
-"contact.email":"Email me",
-"footer":"Built by D Creator · no templates · HTML/CSS/JS"
-}};
-let lang="ru";
-function apply(){
-  const d=I18N[lang];
-  document.documentElement.lang=lang;
-  document.querySelectorAll("[data-i18n]").forEach(el=>{
-    const k=el.getAttribute("data-i18n");
-    if(d[k]==null)return;
-    if(k==="hero.title")el.innerHTML=d[k];else el.textContent=d[k];
-  });
-  document.title=lang==="ru"?"Владислав · D Creator — сайты под ключ, SEO, ИИ-интеграции":"Vladislav · D Creator — end-to-end websites, SEO, AI integrations";
-  const md=document.querySelector('meta[name="description"]');
-  md.content=lang==="ru"?"Веб-разработчик с 6+ годами опыта: разработка, редизайн, SEO, реклама и ИИ-интеграции. Сайты, которые приносят заявки.":"Web developer with 6+ years: development, redesign, SEO, ads and AI integrations. Websites that bring leads.";
-  $("lang").textContent=lang==="ru"?"EN":"RU";
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const fine = matchMedia('(pointer:fine)').matches;
+
+/* particles */
+if(!reduce){
+  const cv=document.getElementById('particles'),cx=cv.getContext('2d');let ps=[];
+  const dpr=Math.min(2,devicePixelRatio||1);
+  function size(){cv.width=innerWidth*dpr;cv.height=innerHeight*dpr;cx.setTransform(dpr,0,0,dpr,0,0);
+    ps=Array.from({length:Math.min(70,innerWidth/22)},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:.6+Math.random()*1.8,sx:(Math.random()-.5)*.3,sy:(Math.random()-.5)*.3,o:.1+Math.random()*.4}))}
+  size();addEventListener('resize',size);
+  (function loop(){cx.clearRect(0,0,innerWidth,innerHeight);for(const p of ps){p.x+=p.sx;p.y+=p.sy;if(p.x<0)p.x=innerWidth;if(p.x>innerWidth)p.x=0;if(p.y<0)p.y=innerHeight;if(p.y>innerHeight)p.y=0;cx.fillStyle=`rgba(56,189,248,${p.o})`;cx.beginPath();cx.arc(p.x,p.y,p.r,0,7);cx.fill()}requestAnimationFrame(loop)})();
 }
-function $(id){return document.getElementById(id)}
-$("lang").onclick=()=>{lang=lang==="ru"?"en":"ru";apply()};
-$("burger").onclick=()=>$("links").classList.toggle("open");
-document.querySelectorAll("#links a").forEach(a=>a.onclick=()=>$("links").classList.remove("open"));
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
-const cv=$("fx"),cx=cv.getContext("2d");const dpr=Math.min(2,devicePixelRatio||1);
-let W,H,ps=[];
-function fit(){W=innerWidth;H=innerHeight;cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0);
-  ps=Array.from({length:Math.min(70,Math.round(W/22))},()=>({x:Math.random()*W,y:Math.random()*H,r:.6+Math.random()*1.6,s:.05+Math.random()*.18,p:Math.random()*6.28,c:Math.random()}));}
-addEventListener("resize",fit);fit();
-const reduced=matchMedia("(prefers-reduced-motion: reduce)").matches;
-function tick(t){cx.clearRect(0,0,W,H);
-  if(!reduced&&!document.hidden){for(const p of ps){p.y-=p.s;if(p.y<-4)p.y=H+4;
-    cx.fillStyle=p.c>.6?"rgba(0,224,255,"+(0.10+0.16*Math.abs(Math.sin(t/900+p.p)))+")":"rgba(242,246,252,"+(0.06+0.12*Math.abs(Math.sin(t/900+p.p)))+")";
-    cx.beginPath();cx.arc(p.x,p.y,p.r,0,6.283);cx.fill();}}
-  requestAnimationFrame(tick);}
-requestAnimationFrame(tick);
-apply();
+
+/* header + progress */
+const header=document.getElementById('header'),bar=document.getElementById('progress');
+addEventListener('scroll',()=>{header.classList.toggle('scrolled',scrollY>40);
+  const h=document.documentElement.scrollHeight-innerHeight;bar.style.width=(scrollY/h*100)+'%'},{passive:true});
+
+/* custom cursor */
+if(fine&&!reduce){const cur=document.getElementById('cursor');
+  addEventListener('mousemove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px'});
+  document.querySelectorAll('a,button,.tile').forEach(el=>{el.addEventListener('mouseenter',()=>{cur.style.width='48px';cur.style.height='48px'});el.addEventListener('mouseleave',()=>{cur.style.width='26px';cur.style.height='26px'})});
+}
+
+/* spotlight + tilt */
+if(fine&&!reduce){
+  document.querySelectorAll('.tile').forEach(t=>{
+    t.addEventListener('mousemove',e=>{const r=t.getBoundingClientRect();
+      t.style.setProperty('--mx',(e.clientX-r.left)+'px');t.style.setProperty('--my',(e.clientY-r.top)+'px');
+      const px=(e.clientX-r.left)/r.width-.5,py=(e.clientY-r.top)/r.height-.5;
+      t.style.transform=`perspective(800px) rotateY(${px*6}deg) rotateX(${-py*6}deg) translateY(-4px)`});
+    t.addEventListener('mouseleave',()=>{t.style.transform=''});
+  });
+}
+
+/* magnetic buttons */
+if(fine&&!reduce){document.querySelectorAll('.magnetic').forEach(b=>{
+  b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();
+    b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.25}px,${(e.clientY-r.top-r.height/2)*.35}px)`});
+  b.addEventListener('mouseleave',()=>{b.style.transform=''});
+});}
+
+/* BEFORE / AFTER SLIDER LOGIC */
+const slider=document.getElementById('baSlider');
+const after=document.getElementById('baAfter');
+const handle=document.getElementById('baHandle');
+let isDragging=false;
+
+function updateSlider(x){
+  const rect=slider.getBoundingClientRect();
+  let pos=((x-rect.left)/rect.width)*100;
+  pos=Math.max(0,Math.min(100,pos));
+  after.style.width=pos+'%';
+  handle.style.left=pos+'%';
+}
+
+slider.addEventListener('mousedown',e=>{isDragging=true;updateSlider(e.clientX)});
+slider.addEventListener('touchstart',e=>{isDragging=true;updateSlider(e.touches[0].clientX)},{passive:true});
+addEventListener('mousemove',e=>{if(!isDragging)return;updateSlider(e.clientX)});
+addEventListener('touchmove',e=>{if(!isDragging)return;updateSlider(e.touches[0].clientX)},{passive:true});
+addEventListener('mouseup',()=>isDragging=false);
+addEventListener('touchend',()=>isDragging=false);
+
+/* counters */
+const fmt=(n)=>n.toLocaleString('ru-RU');
+const cio=new IntersectionObserver((es)=>{es.forEach(e=>{if(!e.isIntersecting)return;cio.unobserve(e.target);
+  const el=e.target,to=+el.dataset.count,suf=el.dataset.suffix||'';
+  if(reduce){el.textContent=to+suf;return}
+  const t0=performance.now(),dur=1400;
+  (function step(t){const p=Math.min(1,(t-t0)/dur);const v=Math.round(to*(1-Math.pow(1-p,3)));el.textContent=fmt(v)+suf;if(p<1)requestAnimationFrame(step)})(t0);
+})},{threshold:.6});
+document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+
+/* scramble */
+const CH='!<>-_\\/[]{}=+*^?#01';
+function scramble(el){const final=el.dataset.final||el.textContent;el.dataset.final=final;
+  if(reduce){el.textContent=final;return}
+  let frame=0;const q=[...final].map((c,i)=>({c,start:i*2,end:i*2+8+Math.random()*12}));
+  (function run(){let out='',done=0;for(const o of q){if(frame>=o.end){out+=o.c;done++}else if(frame>=o.start){out+=CH[Math.floor(Math.random()*CH.length)]}else out+=' '}el.textContent=out;frame++;if(done<q.length)requestAnimationFrame(run)})();
+}
+const sio=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){scramble(e.target);sio.unobserve(e.target)}})},{threshold:.8});
+document.querySelectorAll('[data-scramble]').forEach(el=>sio.observe(el));
+
+/* reveal */
+const rio=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('active');rio.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -80px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>rio.observe(el));
+
+/* i18n */
+const I18N={ru:{
+ "nav.about":"Обо мне","nav.cases":"Кейсы","nav.services":"Услуги","nav.contact":"Контакты",
+ "hero.title":"Сайты, которые <span>приносят заявки</span>, а не просто существуют",
+ "hero.sub":"Я Владислав, основатель DCreator. 6+ лет закрываю полный цикл в одних руках: разработка, редизайн, дизайн, SEO, реклама и ИИ-интеграции. Один ответственный от брифа до измеримого результата.","hero.cta1":"Связаться",
+ "stat.years":"лет в разработке","stat.projects":"проектов","stat.retention":"клиентов возвращаются","stat.reply":"среднее время ответа",
+ "about.h":"Обо мне","about.sub":"Инженерный подход к веб-разработке",
+ "about.c1t":"Техническая база","about.c1d":"Высшее образование инженера-программиста. Пишу чистый, адаптивный и быстрый код, а не собираю конструкторы.",
+ "about.c2t":"Full-cycle","about.c2d":"От прототипа и дизайна до SEO и аналитики — всё под одним контролем.",
+ "about.c3t":"Open Source","about.c3d":"Создаю и публикую свои инструменты автоматизации.",
+ "about.c4t":"Результат в цифрах","about.c4d":"Меряю успех трафиком, заявками и выручкой, а не «красиво».",
+ "cases.h":"Кейсы: Было → Стало","cases.sub":"Потяни ползунок, чтобы увидеть разницу. (Замени абстрактные блоки на свои скриншоты в коде)",
+ "services.h":"Услуги","services.sub":"Полный цикл в одних руках",
+ "s1t":"Разработка под ключ","s1d":"Лендинги, корпоративные сайты и e-commerce: адаптивные, быстрые, с настроенной аналитикой.",
+ "s2t":"Редизайн","s2d":"Устаревший сайт → современный продукт с понятным путём к заявке.",
+ "s3t":"SEO и реклама","s3d":"Техническое SEO, кампании, отчётность по стоимости лида.",
+ "s4t":"ИИ-интеграции","s4d":"Чат-ассистенты и автоматизация рутины в реальном продукте.",
+ "contact.p":"Открыт к удалённой работе в штате и на контракте (US/EU), фриланс-проектам и сотрудничеству. Отвечаю в течение дня. Напишите — разберу вашу задачу бесплатно.","contact.email":"Написать на почту","footer":"Сделано DCreator · без шаблонов · HTML/CSS/JS"
+},en:{
+ "nav.about":"About","nav.cases":"Cases","nav.services":"Services","nav.contact":"Contact",
+ "hero.title":"Websites that <span>bring leads</span>, not just exist",
+ "hero.sub":"I'm Vladislav, founder of DCreator. For 6+ years I cover the full cycle in one pair of hands: development, redesign, design, SEO, paid ads and AI integrations. One owner from brief to measurable result.","hero.cta1":"Get in touch",
+ "stat.years":"years in development","stat.projects":"projects","stat.retention":"clients come back","stat.reply":"avg reply time",
+ "about.h":"About","about.sub":"Engineering approach to web development",
+ "about.c1t":"Technical base","about.c1d":"Degree in software engineering. I write clean, responsive, fast code — not just assembling builders.",
+ "about.c2t":"Full-cycle","about.c2d":"From prototype and design to SEO and analytics — all under one control.",
+ "about.c3t":"Open Source","about.c3d":"I build and publish my own automation tools.",
+ "about.c4t":"Results in numbers","about.c4d":"I measure success in traffic, leads and revenue, not in 'looks nice'.",
+ "cases.h":"Cases: Before → After","cases.sub":"Drag the slider to see the difference. (Replace abstract blocks with your screenshots in the code)",
+ "services.h":"Services","services.sub":"Full cycle in one pair of hands",
+ "s1t":"End-to-end development","s1d":"Landing pages, corporate sites and e-commerce: responsive, fast, with analytics configured.",
+ "s2t":"Redesign","s2d":"Outdated site → modern product with a clear path to conversion.",
+ "s3t":"SEO & ads","s3d":"Technical SEO, campaigns, reporting on cost per lead.",
+ "s4t":"AI integrations","s4d":"Chat assistants and routine automation wired into real products.",
+ "contact.p":"Open to remote full-time & contract roles (US/EU), freelance projects and collaborations. I reply within a day. Write me — I'll review your task for free.","contact.email":"Email me","footer":"Built by DCreator · no templates · HTML/CSS/JS"
+}};
+let lang="ru";const lt=document.getElementById('langToggle');
+lt.onclick=()=>{lang=lang==='ru'?'en':'ru';lt.textContent=lang==='ru'?'EN':'RU';document.documentElement.lang=lang;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(I18N[lang][k]){k==='hero.title'?el.innerHTML=I18N[lang][k]:el.textContent=I18N[lang][k]}});
+  document.querySelectorAll('[data-scramble]').forEach(el=>{if(el.dataset.final)el.dataset.final=null});
+};
 </script>
 </body>
 </html>
